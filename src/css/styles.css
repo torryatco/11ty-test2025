@@ -20,10 +20,21 @@ nav ul {
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: space-around;
 }
 
 nav ul a {
   padding: 0.5rem 1rem;
+}
+
+nav a:hover,
+.p-home .t-home a,
+.p-about .t-about a,
+.p-pictures .t-pictures a,
+.p-contact .t-contact a {
+  background-color: #007eb6;
+  color: #fff;
+  border-radius: 4px;
 }
 
 .content {
@@ -39,11 +50,11 @@ nav ul a {
   margin-bottom: 0;
 }
 
-.nav-item-active a {
+/* .nav-item-active a {
   color: #fff;
   background-color: #007eb6;
   border-radius: 4px;
-}
+} */
 
 button {
   border: none;
@@ -52,10 +63,26 @@ button {
   color: #fff;
   border-radius: 4px;
   font-size: 1rem;
-  width: 4rem;
 }
 
 .pics .content img {
   width: 60%;
   padding: 1rem;
+}
+
+.p-pictures img {
+  max-width: 50%;
+}
+
+
+@media (min-width: 480px) {
+  .stories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
+.stories .item {
+  border-bottom: 1px dashed #aaa;
 }
